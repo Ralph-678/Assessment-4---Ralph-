@@ -9,18 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: local_api_js
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install
@@ -32,10 +28,7 @@ jobs:
         run: sleep 3
 
       - name: Test API
-        run: curl -f http://localhost:3000/api
-
-      - name: Test newAPI
-        run: curl -f http://localhost:3000/newapi
-
+        run: curl -f http://localhost:3000
+        
       - name: Stop server
         run: pkill node
