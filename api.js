@@ -4,7 +4,7 @@ const app = express();
 const visiteur = process.env.visiteur || 'Anonyme';
 
 app.get('/', (req, res) => {
-  res.send('You have well deployed you app: Congrats. you are welcome. you will be an IT technicien soon.');
+  res.send('You have well deployed you app: Congrats. you are welcome. You will be an IT technicien soon.');
 });
 
 const PORT = process.env.PORT || 3000;
