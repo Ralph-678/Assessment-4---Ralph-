@@ -6,6 +6,9 @@ const visiteur = process.env.visiteur || 'Anonyme';
 app.get('/', (req, res) => {
   res.send('You have well deployed you app: Congrats. you are welcome. You will be an IT technicien soon.');
 });
+app.get('/api', (req, res) => {
+  res.send(' are welcome. You will be an IT technicien soon.');
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
