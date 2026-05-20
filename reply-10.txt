@@ -1,0 +1,6 @@
+You have created a new repo and copy the content of package.zip inside.
+Which two other solutions could have you chosen to obtain the same result using this existing repo?
+
+the two other solution to obtain the same result are:
+1. creat a folder with the content of the pakage inside than clone the repo created on github than you merge the content in to the repo.
+2. with the folder contaning the content of the pakage created on an other branch request a colaboration do a pull request than merge the newly brach into the main repo branch. 
