@@ -11,10 +11,7 @@ app.get('/health', (req, res) => {
     status: "ok",
     environment: process.env.APP_ENV || "local"
   });
-app.get('/api', (req, res) => {
-  res.send(' are welcome. You will be an IT technicien soon.');
-});
-
+  
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
