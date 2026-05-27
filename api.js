@@ -4,14 +4,16 @@ const app = express();
 const visiteur = process.env.visiteur || 'Anonyme';
 
 app.get('/', (req, res) => {
-  res.send('You have well deployed you app: Congrats. you are welcome. You will be an IT technicien soon.');
+  res.send('You have well deployed you app: Congrats');
 });
+
 app.get('/health', (req, res) => {
   res.json({
     status: "ok",
     environment: process.env.APP_ENV || "local"
   });
-  
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
