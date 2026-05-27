@@ -26,6 +26,21 @@ jobs:
 
       - name: Wait for server
         run: sleep 3
+      - name: Verify Secret
+
+        run: |
+
+          if [ -z "$CI_SECRET_MESSAGE" ]; then
+            echo "Secret missing"
+            exit 1
+          else
+            echo "GitHub Secret detected"
+          fi
+
+        env:
+
+          CI_SECRET_MESSAGE: ${{ secrets.CI_SECRET_MESSAGE }}
+    
 
       - name: Test API
         run: curl -f http://localhost:3000
